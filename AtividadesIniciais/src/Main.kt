@@ -3,7 +3,7 @@
 fun main() {
     val calc = CalculadoraInteligente()
     println(calcInteligenteTwoNums("5 * 7"))
-    println(calc.calcInteligente("5 + 7 * 9 / 2 * (5 - 4) * 2"))
+    println(calc.calcInteligente("10-5+2"))
 }
 
 fun calcInteligenteTwoNums(sOperacao: String): Int {
