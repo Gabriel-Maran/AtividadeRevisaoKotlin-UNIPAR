@@ -6,7 +6,7 @@ class CalculadoraInteligente {
 
     constructor()
 
-    fun calcInteligente(sOperacao: String): Double { //5 + 7 * 9 /( 2 * (5 - 4)) * 2
+    fun calcInteligente(sOperacao: String): Double { //5 + 7 * 9 / 2 * (5 - 4) * 2
         inicializarVariaveis()
         val sChar = sOperacao.replace(" ", "").toCharArray() //5+7*9/2*(5-4)*2
         sinaisFinais.add(Oper.VAZIO)
@@ -94,8 +94,8 @@ class CalculadoraInteligente {
     private fun solveSumAndSub(nums: ArrayDeque<Double>, sinais: ArrayDeque<Oper>): Double {
         while (nums.size > 1) {
             when (sinais.removeFirst()) {
-                Oper.SOMA -> nums.addFirst(nums.removeFirst()+ nums.removeFirst() )
-                Oper.SUB -> nums.addFirst(nums.removeFirst()+ nums.removeFirst() )
+                Oper.SOMA -> nums.addFirst(nums.removeFirst() + nums.removeFirst() )
+                Oper.SUB -> nums.addFirst(nums.removeFirst() -  nums.removeFirst() )
                 else -> 0
             }
         }
